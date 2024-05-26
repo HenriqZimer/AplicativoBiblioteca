@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Emprestimo {
   private Usuario usuario;
@@ -39,4 +40,16 @@ public class Emprestimo {
   public void setDevolvido(boolean devolvido) {
     this.devolvido = devolvido;
   }
+
+  @Override
+    public String toString() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return "Emprestimo{" +
+               "usuario=" + usuario.getNome() +
+               ", livro='" + livro.getTitulo() + '\'' +
+               ", dataEmprestimo=" + dataEmprestimo.format(formatter) +
+               ", dataDevolucao=" + dataDevolucao.format(formatter) +
+               ", devolvido=" + (devolvido ? "Sim" : "Não") +
+               '}';
+    }
 }

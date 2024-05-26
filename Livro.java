@@ -4,7 +4,7 @@ public class Livro extends ItemBiblioteca {
     private int copias;
 
     public Livro(String titulo, String isbn, String autor, String categoria, int copias) {
-        super(titulo, isbn);
+        super(titulo, isbn); // Primeiro chama o construtor da classe base
         this.autor = autor;
         this.categoria = categoria;
         this.copias = copias;
@@ -33,5 +33,16 @@ public class Livro extends ItemBiblioteca {
 
     public void setCopias(int copias) {
         this.copias = copias;
+    }
+
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "título='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", categoria='" + categoria + '\'' +
+                ", cópias=" + copias +
+                '}';
     }
 }

@@ -56,7 +56,7 @@ public class GerenciadorDeLivros {
         String categoria = scanner.nextLine();
         System.out.print("Digite o número de cópias: ");
         int copias = scanner.nextInt();
-        Livro novoLivro = new Livro(titulo, autor, isbn, categoria, copias);
+        Livro novoLivro = new Livro(titulo, isbn, autor, categoria, copias); // Verifique a ordem dos argumentos
         livros.add(novoLivro);
         System.out.println("Livro adicionado com sucesso!");
     }

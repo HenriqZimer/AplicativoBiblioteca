@@ -15,6 +15,7 @@ public class Emprestimo {
     this.devolvido = false;
   }
 
+  // Getters e setters
   public Usuario getUsuario() {
     return usuario;
   }
@@ -37,16 +38,5 @@ public class Emprestimo {
 
   public void setDevolvido(boolean devolvido) {
     this.devolvido = devolvido;
-  }
-
-  @Override
-  public String toString() {
-    return "Emprestimo{" +
-        "usuario=" + usuario.getNome() +
-        ", livro=" + livro.getTitulo() +
-        ", dataEmprestimo=" + dataEmprestimo +
-        ", dataDevolucao=" + dataDevolucao +
-        ", devolvido=" + devolvido +
-        '}';
   }
 }

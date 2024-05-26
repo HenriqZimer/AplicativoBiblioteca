@@ -14,4 +14,16 @@ public class Usuario extends Pessoa {
   public void setTipo(String tipo) {
     this.tipo = tipo;
   }
+
+  @Override
+  public String toString() {
+    return "Usuario{" +
+        "nome='" + nome + '\'' +
+        ", cpf='" + cpf + '\'' +
+        ", endereco='" + endereco + '\'' +
+        ", telefone='" + telefone + '\'' +
+        ", tipo='" + tipo + '\'' +
+        '}';
+  }
+
 }
